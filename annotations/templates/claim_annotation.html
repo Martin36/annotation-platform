@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Annotate claim</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h4>Claim</h4>
+    <p>{{ claim.sent_sv }}</p>
+
+    <form action="/annotations/annotation/{{ claim.pk }}/" method="post">
+      {% csrf_token %}
+      <h5>Label</h5>
+      <div class="form-group">
+        {% for radio in form.label %}
+        <div>
+          {{ radio }}
+        </div>
+        {% endfor %}
+      </div>
+      <h5>Comment</h5>
+      <div class="form-group">
+        {{ form.comment }}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
