@@ -1,6 +1,7 @@
-from pyexpat import model
 from django.db import models
 from django.contrib.auth.models import User
+
+from annotations.enums import AnnotationCategory
 
 class Claim(models.Model):
   idx = models.IntegerField()
@@ -16,6 +17,7 @@ class Annotation(models.Model):
   annotator_id = models.CharField(max_length=50)
   label = models.PositiveIntegerField()
   comment = models.TextField(blank=True)    # TODO: Should this be required?
+  category = models.CharField(max_length=255, choices=AnnotationCategory.choices(), blank=True)
   created_on = models.DateTimeField(auto_now_add=True)
   last_modified_on = models.DateTimeField(auto_now=True)
   claim = models.ForeignKey(Claim, on_delete=models.CASCADE)

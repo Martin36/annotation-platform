@@ -11,9 +11,12 @@ class AnnotationForm(forms.Form):
     widget=forms.RadioSelect
   )
 
-  comment = forms.CharField(widget=forms.Textarea(
-    attrs={
-      "class": "form-control",
-      "placeholder": "Write some words why you choose this label..."
-    })
+  comment = forms.CharField(
+    widget=forms.Textarea(
+      attrs={
+        "class": "form-control",
+        "placeholder": "Write some words why you choose this label..."
+      }
+    ),
+    required=False
   )
