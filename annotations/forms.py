@@ -1,8 +1,9 @@
 from django import forms
+from django.utils.translation import gettext as _
 
 LABEL_CHOICES = (
-  (0, "NOT Checkworthy"),
-  (1, "Checkworthy")
+  (0, _("NOT Checkworthy")),
+  (1, _("Checkworthy"))
 )
 
 class AnnotationForm(forms.Form):
@@ -15,7 +16,7 @@ class AnnotationForm(forms.Form):
     widget=forms.Textarea(
       attrs={
         "class": "form-control",
-        "placeholder": "Write some words why you choose this label..."
+        "placeholder": _("Write some words why you choose this label...")
       }
     ),
     required=False
