@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import environ
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 env = environ.Env()
 
@@ -144,6 +145,10 @@ LOCALE_PATHS = [
     'locale/',
 ]
 
+LANGUAGES = [
+    ('sv', _('Swedish')),
+    ('en', _('English')),
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
