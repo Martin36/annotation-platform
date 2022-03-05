@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
@@ -37,11 +38,14 @@ def claim_annotation(request, pk):
     if form.is_valid():
       store_annotation(request, form, claim)
       # Redirect user to next claim to annotate
-      return redirect(f"/annotations/annotation/{pk+1}")
+      return redirect(f"/annotation/{pk+1}")
+
+  language = request.LANGUAGE_CODE
       
   context = {
     "claim": claim,
-    "form": form
+    "form": form,
+    "language": language
   }
   
   return render(request, 'claim_annotation.html', context)
@@ -60,7 +64,9 @@ def store_annotation(request, form, claim):
   annotation = Annotation(
     label=form.cleaned_data["label"],
     comment=form.cleaned_data["comment"],
+    category=form.cleaned_data["category"],
     claim=claim,
     user=request.user
   )
   annotation.save()
+  

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-03 09:22+0100\n"
+"POT-Creation-Date: 2022-03-05 09:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,28 +22,44 @@ msgstr ""
 msgid "Swedish claim annotator"
 msgstr "Svenska påstående annotering"
 
-#: annotation_platform/templates/base.html:15
-msgid "Annotation"
-msgstr "Annotering"
-
-#: annotation_platform/templates/base.html:22
-#: annotation_platform/templates/base.html:29
+#: annotation_platform/templates/base.html:23
+#: annotation_platform/templates/base.html:30
 msgid "Logout"
 msgstr "Logga ut"
 
-#: annotation_platform/templates/base.html:25
+#: annotation_platform/templates/base.html:26
 msgid "Change password"
 msgstr "Byt lösenord"
 
-#: annotations/forms.py:6
+#: annotations/enums.py:6
+msgid "Opinion"
+msgstr "Åsikt"
+
+#: annotations/enums.py:7
+msgid "Prediction"
+msgstr "Förutsägelse"
+
+#: annotations/enums.py:8
+msgid "Impossible"
+msgstr "Omöjlig"
+
+#: annotations/enums.py:9
+msgid "Uninteresting"
+msgstr "Ointressant"
+
+#: annotations/enums.py:10
+msgid "Needs context"
+msgstr "Behöver sammanhang"
+
+#: annotations/forms.py:7
 msgid "NOT Checkworthy"
 msgstr "INTE Kontrollvärd"
 
-#: annotations/forms.py:7
+#: annotations/forms.py:8
 msgid "Checkworthy"
 msgstr "Kontrollvärd"
 
-#: annotations/forms.py:20
+#: annotations/forms.py:34
 msgid "Write some words why you choose this label..."
 msgstr "Skriv några ord om varför du valde den här etiketten..."
 
@@ -59,22 +75,30 @@ msgstr "Påstende lista"
 msgid "Annotate claims"
 msgstr "Annotera påståenden"
 
-#: annotations/templates/claim_annotation.html:6
+#: annotations/templates/claim_annotation.html:8
 msgid "Annotate claim"
 msgstr "Annotera påstående"
 
-#: annotations/templates/claim_annotation.html:9
+#: annotations/templates/claim_annotation.html:11
 msgid "Claim"
 msgstr "Påstående"
 
-#: annotations/templates/claim_annotation.html:14
+#: annotations/templates/claim_annotation.html:18
+msgid "Paragraph"
+msgstr "Paragraf"
+
+#: annotations/templates/claim_annotation.html:28
 msgid "Label"
 msgstr "Etikett"
 
-#: annotations/templates/claim_annotation.html:22
+#: annotations/templates/claim_annotation.html:35
+msgid "Category"
+msgstr "Kategori"
+
+#: annotations/templates/claim_annotation.html:50
 msgid "Comment"
 msgstr "Kommentar"
 
-#: annotations/templates/claim_annotation.html:26
+#: annotations/templates/claim_annotation.html:54
 msgid "Submit"
 msgstr "Skicka in"

@@ -1,24 +1,41 @@
 {% extends "base.html" %}
 
 {% load i18n %}
+{% load highlight %}
 
 {% block page_content %}
 <h1>{% translate "Annotate claim" %}</h1>
 <div class="row">
   <div class="col-md-12">
     <h4>{% translate "Claim" %}</h4>
-    <p>{{ claim.sent_sv }}</p>
+    {% if language == "sv" %}
+      <p>{{ claim.sent_sv }}</p>
+    {% else %}
+      <p>{{ claim.sent_en }}</p>
+    {% endif %}
 
-    <form action="/annotations/annotation/{{ claim.pk }}/" method="post">
+    <h4>{% translate "Paragraph" %}</h4>
+    {% if language == "sv" %}
+      <p>{{ claim.paragraph_text_sv|highlight:claim.sent_sv }}</p>
+    {% else %}
+      <p>{{ claim.paragraph_text_en }}</p>
+    {% endif %}
+
+    <form action="/{{ language }}/annotation/{{ claim.pk }}/" method="post">
       {% csrf_token %}
+
       <h5>{% translate "Label" %}</h5>
       <div class="form-group">
         {% for radio in form.label %}
-        <div>
-          {{ radio }}
-        </div>
+          <div>{{ radio }}</div>
         {% endfor %}
       </div>
+
+      <h5>{% translate "Category" %}</h5>
+      <div class="form-group">
+        {{ form.category }}
+      </div>
+
       <h5>{% translate "Comment" %}</h5>
       <div class="form-group">
         {{ form.comment }}

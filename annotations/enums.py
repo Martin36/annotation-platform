@@ -1,13 +1,10 @@
 from enum import Enum
+from django.db import models
+from django.utils.translation import gettext_lazy as _
 
-
-class AnnotationCategory(Enum):
-  OPINION = "OPINION"
-  FUTURE_PREDICTION = "FUTURE_PREDICTION"
-  IMPOSSIBLE = "IMPOSSIBLE"
-  UNINTERESTING = "UNINTERESTING"
-  NEEDS_CONTEXT = "NEEDS_CONTEXT"
-  
-  @classmethod
-  def choices(cls):
-    return tuple((i.name, i.value) for i in cls)
+class Category(models.TextChoices):
+  OPINION = "Opinion", _("Opinion")
+  PREDICTION = "Prediction", _("Prediction")
+  IMPOSSIBLE = "Impossible", _("Impossible")
+  UNINTERESTING = "Uninteresting", _("Uninteresting")
+  NEEDS_CONTEXT = "Needs context", _("Needs context")
