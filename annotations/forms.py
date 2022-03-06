@@ -22,7 +22,9 @@ class AnnotationForm(forms.Form):
       attrs= {
         "class": "form-control"
       }
-    ))
+    ),
+    required=False
+  )
 
   comment = forms.CharField(
     widget=forms.Textarea(

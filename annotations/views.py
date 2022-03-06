@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
 from annotations.forms import AnnotationForm
+from annotations.helpers import find_first_missing_int
 from annotations.models import Annotation, Claim
 
 def annotation_index(request):
@@ -16,14 +17,9 @@ def claim_list(request):
 
 @login_required
 def annotate_next_claim(request):
-  last_annotation = Annotation.objects.filter(
-      user__username=request.user
-    ).order_by("-id").first()
-  if last_annotation:
-    next_annotation_id = last_annotation.id + 1
-  else:
-    next_annotation_id = 0
-  return redirect(f"annotation/{next_annotation_id}")
+  annotated_claim_indices = get_annotated_indices_for_user(request.user)
+  next_idx = find_first_missing_int(annotated_claim_indices)
+  return redirect(f"/annotation/{next_idx}")
 
 @login_required
 def claim_annotation(request, pk):
@@ -36,8 +32,7 @@ def claim_annotation(request, pk):
     form = AnnotationForm(request.POST)
     if form.is_valid():
       store_annotation(request, form, claim)
-      # Redirect user to next claim to annotate
-      return redirect(f"/annotation/{pk+1}")
+      return annotate_next_claim(request)
 
   language = request.LANGUAGE_CODE
       
@@ -69,3 +64,8 @@ def store_annotation(request, form, claim):
   )
   annotation.save()
   
+def get_annotated_indices_for_user(user):
+  annotations_by_user = Annotation.objects.filter(
+    user__username=user
+  ).order_by("-claim__id")
+  return [annotation.claim.id for annotation in annotations_by_user]

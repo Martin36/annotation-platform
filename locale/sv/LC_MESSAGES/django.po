@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-06 09:24+0100\n"
+"POT-Creation-Date: 2022-03-06 13:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,14 +51,18 @@ msgid "Prediction"
 msgstr "Förutsägelse"
 
 #: annotations/enums.py:9
+msgid "Too general"
+msgstr "För generell"
+
+#: annotations/enums.py:10
 msgid "Impossible"
 msgstr "Omöjlig"
 
-#: annotations/enums.py:10
+#: annotations/enums.py:11
 msgid "Uninteresting"
 msgstr "Ointressant"
 
-#: annotations/enums.py:11
+#: annotations/enums.py:12
 msgid "Needs context"
 msgstr "Behöver sammanhang"
 
@@ -74,7 +78,7 @@ msgstr "Kontrollvärd"
 msgid "Not applicable"
 msgstr "Ej tillämplig"
 
-#: annotations/forms.py:31
+#: annotations/forms.py:33
 msgid "Write some words why you choose this label..."
 msgstr "Skriv några ord om varför du valde den här etiketten..."
 

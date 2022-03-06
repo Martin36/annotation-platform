@@ -6,6 +6,7 @@ class Category(models.TextChoices):
   NONE = "", _("None")
   OPINION = "Opinion", _("Opinion")
   PREDICTION = "Prediction", _("Prediction")
+  TOO_GENERAL = "Too general", _("Too general")
   IMPOSSIBLE = "Impossible", _("Impossible")
   UNINTERESTING = "Uninteresting", _("Uninteresting")
   NEEDS_CONTEXT = "Needs context", _("Needs context")
