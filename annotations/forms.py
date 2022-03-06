@@ -5,18 +5,15 @@ from annotations.enums import Category
 
 LABEL_CHOICES = (
   (0, _("NOT Checkworthy")),
-  (1, _("Checkworthy"))
+  (1, _("Checkworthy")),
+  (2, _("Not applicable"))
 )
 
 
 class AnnotationForm(forms.Form):
   label = forms.ChoiceField(
     choices=LABEL_CHOICES,
-    widget=forms.RadioSelect(
-      attrs= {
-        "class": "form-check-input" # TODO: Doesn't do anything
-      }
-    )
+    widget=forms.RadioSelect()
   )
   
   category = forms.ChoiceField(

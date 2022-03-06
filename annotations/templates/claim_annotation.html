@@ -18,13 +18,15 @@
     {% if language == "sv" %}
       <p>{{ claim.paragraph_text_sv|highlight:claim.sent_sv }}</p>
     {% else %}
-      <p>{{ claim.paragraph_text_en }}</p>
+      <p>{{ claim.paragraph_text_en|highlight:claim.sent_en }}</p>
     {% endif %}
 
-    <form action="/{{ language }}/annotation/{{ claim.pk }}/" method="post">
+    <form action="/{{ language }}/annotation/{{ claim.pk }}/" 
+          method="post" 
+          style="margin-top: 50px">
       {% csrf_token %}
 
-      <h5>{% translate "Label" %}</h5>
+      <h5>{% translate "Label" %}*</h5>
       <div class="form-group">
         {% for radio in form.label %}
           <div>{{ radio }}</div>
@@ -40,7 +42,9 @@
       <div class="form-group">
         {{ form.comment }}
       </div>
+      <p>* {% translate "Required" %}</p>
       <button type="submit" class="btn btn-primary">{% translate "Submit" %}</button>
+      <a class="btn btn-secondary" href="{% url 'annotation_index' %}">{% translate "Return" %}</a>
     </form>
   </div>
 </div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-05 09:56+0100\n"
+"POT-Creation-Date: 2022-03-06 09:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: annotation_platform/templates/base.html:7
-msgid "Swedish claim annotator"
-msgstr "Svenska påstående annotering"
+#: annotation_platform/settings.py:149
+msgid "Swedish"
+msgstr "Svenska"
+
+#: annotation_platform/settings.py:150
+msgid "English"
+msgstr "Engelska"
 
 #: annotation_platform/templates/base.html:23
-#: annotation_platform/templates/base.html:30
 msgid "Logout"
 msgstr "Logga ut"
 
 #: annotation_platform/templates/base.html:26
 msgid "Change password"
 msgstr "Byt lösenord"
+
+#: annotation_platform/templates/base.html:30
+msgid "Login"
+msgstr "Logga in"
 
 #: annotations/enums.py:6
 msgid "Opinion"
@@ -59,46 +66,156 @@ msgstr "INTE Kontrollvärd"
 msgid "Checkworthy"
 msgstr "Kontrollvärd"
 
-#: annotations/forms.py:34
+#: annotations/forms.py:9
+msgid "Not applicable"
+msgstr "Ej tillämplig"
+
+#: annotations/forms.py:31
 msgid "Write some words why you choose this label..."
 msgstr "Skriv några ord om varför du valde den här etiketten..."
 
-#: annotations/templates/annotation_index.html:7
+#: annotations/templates/annotation_index.html:6
 msgid "Claim annotations"
 msgstr "Påstående annoteringar"
 
+#: annotations/templates/annotation_index.html:8
+msgid ""
+"Welcome to Påstående Annoteraren. Here you can contribute to creating a "
+"claim detection dataset in Swedish."
+msgstr ""
+"Välkommen till Påstående Annoteraren. Här kan du bidra till att skapa ett "
+"dataset för faktapåstående detektering på svenska."
+
+#: annotations/templates/annotation_index.html:10
+msgid "How it works"
+msgstr "Hur det fungerar"
+
 #: annotations/templates/annotation_index.html:12
+msgid ""
+"By clicking the \"Annotate claims\" button down below you will be taken to a "
+"page where you are asked to label claims."
+msgstr ""
+"Genom att klicka på knappen \"Annotera påstående\" nedan kommer du till en "
+"sida där du kan annotera påståenden."
+
+#: annotations/templates/annotation_index.html:14
+msgid ""
+"For each claim you will have to select one of three different labels. The "
+"labels are as follows:"
+msgstr ""
+"För varje påstående måste du välja en av tre olika etiketter. Etiketterna "
+"är följande:"
+
+#: annotations/templates/annotation_index.html:17
+msgid ""
+"NOT Checkworthy, which means that the stated claim is either not possible to "
+"check, such as predictions about the future, or it may be possible to check "
+"but not of interest to the general public, such as the breakfast the speaker "
+"had in the morning."
+msgstr ""
+"INTE Kontrollvärd, vilket innebär att det angivna påståendet antingen inte går "
+"att kontrollera, såsom förutsägelser om framtiden, eller så kan det vara möjligt "
+"att kontrollera men inte ointressant för allmänheten, såsom ett påstående om "
+"talarens frukost."
+
+#: annotations/templates/annotation_index.html:18
+msgid ""
+"Checkworthy, which means that the statement is possible to check by a human "
+"fact-checker and is interesting to the general public, such as if the "
+"unemployment rate has increased or decreased by the proposed amount."
+msgstr ""
+"Kontrollvärd, vilket innebär att påståendet är möjligt att kontrollera av en "
+"faktagranskare och är intressant för allmänheten, till exempel om arbetslösheten "
+"har ökat eller minskat med given andel."
+
+#: annotations/templates/annotation_index.html:19
+msgid ""
+"Not applicable, this label should ONLY be used in the case where you are "
+"unsure about which label to give the claim."
+msgstr ""
+"Ej tillämpligt, den här etiketten ska ENDAST användas i de fall du är osäker "
+"på vilken etikett du ska ge påståendet."
+
+#: annotations/templates/annotation_index.html:22
+msgid ""
+"There are two additional fields, which are optional, but that you are "
+"encouraged to fill in to make the annotation more valuable. These are:"
+msgstr ""
+"Det finns ytterligare två fält, som är valfria, men som du uppmanas att fylla "
+"i för att göra annoteringen mer värdefull. Dessa är:"
+
+#: annotations/templates/annotation_index.html:25
+msgid ""
+"Category, which is a dropdown that shows some predefined categories for "
+"claims. If you think that the current claim fits one of the categories, "
+"please make sure to add that."
+msgstr ""
+"Kategori, vilket är en dropdown som visar några fördefinierade kategorier "
+"för olika sorters påståenden. Om du tror att det aktuella påståendet passar "
+"någon av kategorierna, se till att lägga till det."
+
+#: annotations/templates/annotation_index.html:26
+msgid ""
+"Comment, is a text field where you can add a comment of how you thought "
+"about the annotation of the claim. By adding this your annotation will be "
+"more valuable, but it is not mandatory."
+msgstr ""
+"Kommentar, är ett textfält där du kan lägga till en kommentar om hur du tänkt "
+"kring annoteringen av påståendet. Genom att lägga till detta blir din annotering "
+"mer värdefull, men fältet är inte obligatorisk."
+
+#: annotations/templates/annotation_index.html:29
+msgid ""
+"When you are done, click the submit button to go to the next claim. The "
+"return button will bring you back to this page."
+msgstr ""
+"När du är klar klickar du på knappen \"Skicka in\" för att gå till nästa "
+"anspråk. \"Retur\" knappen tar dig tillbaka till denna sida."
+
+#: annotations/templates/annotation_index.html:31
+msgid "Let's get started!"
+msgstr "Låt oss börja!"
+
+#: annotations/templates/annotation_index.html:35
 msgid "Claim list"
 msgstr "Påstende lista"
 
-#: annotations/templates/annotation_index.html:16
+#: annotations/templates/annotation_index.html:39
 msgid "Annotate claims"
 msgstr "Annotera påståenden"
 
-#: annotations/templates/claim_annotation.html:8
+#: annotations/templates/claim_annotation.html:7
 msgid "Annotate claim"
 msgstr "Annotera påstående"
 
-#: annotations/templates/claim_annotation.html:11
+#: annotations/templates/claim_annotation.html:10
 msgid "Claim"
 msgstr "Påstående"
 
-#: annotations/templates/claim_annotation.html:18
+#: annotations/templates/claim_annotation.html:17
 msgid "Paragraph"
 msgstr "Paragraf"
 
-#: annotations/templates/claim_annotation.html:28
+#: annotations/templates/claim_annotation.html:29
 msgid "Label"
 msgstr "Etikett"
 
-#: annotations/templates/claim_annotation.html:35
+#: annotations/templates/claim_annotation.html:36
 msgid "Category"
 msgstr "Kategori"
 
-#: annotations/templates/claim_annotation.html:50
+#: annotations/templates/claim_annotation.html:41
 msgid "Comment"
 msgstr "Kommentar"
 
-#: annotations/templates/claim_annotation.html:54
+#: annotations/templates/claim_annotation.html:45
+msgid "Required"
+msgstr "Obligatorisk"
+
+#: annotations/templates/claim_annotation.html:46
 msgid "Submit"
 msgstr "Skicka in"
+
+#: annotations/templates/claim_annotation.html:47
+msgid "Return"
+msgstr "Retur"

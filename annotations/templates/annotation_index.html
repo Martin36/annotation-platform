@@ -3,9 +3,32 @@
 {% load i18n %}
 
 {% block page_content %}
-<div class="row">
-  <h1>{% translate "Claim annotations" %}</h1>
-</div>
+<h1>{% translate "Claim annotations" %}</h1>
+
+<p>{% translate "Welcome to Påstående Annoteraren. Here you can contribute to creating a claim detection dataset in Swedish." %}</p>
+
+<h2>{% translate "How it works" %}</h2>
+
+<p>{% translate 'By clicking the "Annotate claims" button down below you will be taken to a page where you are asked to label claims.' %}
+
+<p>{% translate "For each claim you will have to select one of three different labels. The labels are as follows:" %}</p>
+
+<ul>
+  <li>{% translate "NOT Checkworthy, which means that the stated claim is either not possible to check, such as predictions about the future, or it may be possible to check but not of interest to the general public, such as the breakfast the speaker had in the morning." %}</li>
+  <li>{% translate "Checkworthy, which means that the statement is possible to check by a human fact-checker and is interesting to the general public, such as if the unemployment rate has increased or decreased by the proposed amount." %}</li>
+  <li>{% translate "Not applicable, this label should ONLY be used in the case where you are unsure about which label to give the claim." %}</li>
+</ul>
+
+<p>{% translate "There are two additional fields, which are optional, but that you are encouraged to fill in to make the annotation more valuable. These are:" %}</p>
+
+<ul>
+  <li>{% translate "Category, which is a dropdown that shows some predefined categories for claims. If you think that the current claim fits one of the categories, please make sure to add that." %}</li>
+  <li>{% translate "Comment, is a text field where you can add a comment of how you thought about the annotation of the claim. By adding this your annotation will be more valuable, but it is not mandatory." %}</li>
+</ul>
+
+<p>{% translate "When you are done, click the submit button to go to the next claim. The return button will bring you back to this page." %}</p>
+
+<p>{% translate "Let’s get started!" %}</p>
 
 <div class="row">
   <a href="{% url 'claim_list' %}" class="btn btn-primary mr-2">
