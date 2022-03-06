@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-06 09:05+0100\n"
+"POT-Creation-Date: 2022-03-06 09:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,22 +39,26 @@ msgid "Login"
 msgstr "Logga in"
 
 #: annotations/enums.py:6
+msgid "None"
+msgstr "Ingen"
+
+#: annotations/enums.py:7
 msgid "Opinion"
 msgstr "Åsikt"
 
-#: annotations/enums.py:7
+#: annotations/enums.py:8
 msgid "Prediction"
 msgstr "Förutsägelse"
 
-#: annotations/enums.py:8
+#: annotations/enums.py:9
 msgid "Impossible"
 msgstr "Omöjlig"
 
-#: annotations/enums.py:9
+#: annotations/enums.py:10
 msgid "Uninteresting"
 msgstr "Ointressant"
 
-#: annotations/enums.py:10
+#: annotations/enums.py:11
 msgid "Needs context"
 msgstr "Behöver sammanhang"
 
@@ -103,8 +107,8 @@ msgid ""
 "For each claim you will have to select one of three different labels. The "
 "labels are as follows:"
 msgstr ""
-"För varje påstående måste du välja en av tre olika etiketter. Etiketterna "
-"är följande:"
+"För varje påstående måste du välja en av tre olika etiketter. Etiketterna är "
+"följande:"
 
 #: annotations/templates/annotation_index.html:17
 msgid ""
@@ -113,10 +117,10 @@ msgid ""
 "but not of interest to the general public, such as the breakfast the speaker "
 "had in the morning."
 msgstr ""
-"INTE Kontrollvärd, vilket innebär att det angivna påståendet antingen inte går "
-"att kontrollera, såsom förutsägelser om framtiden, eller så kan det vara möjligt "
-"att kontrollera men inte ointressant för allmänheten, såsom ett påstående om "
-"talarens frukost."
+"INTE Kontrollvärd, vilket innebär att det angivna påståendet antingen inte "
+"går att kontrollera, såsom förutsägelser om framtiden, eller så kan det vara "
+"möjligt att kontrollera men inte ointressant för allmänheten, såsom ett "
+"påstående om talarens frukost."
 
 #: annotations/templates/annotation_index.html:18
 msgid ""
@@ -125,8 +129,8 @@ msgid ""
 "unemployment rate has increased or decreased by the proposed amount."
 msgstr ""
 "Kontrollvärd, vilket innebär att påståendet är möjligt att kontrollera av en "
-"faktagranskare och är intressant för allmänheten, till exempel om arbetslösheten "
-"har ökat eller minskat med given andel."
+"faktagranskare och är intressant för allmänheten, till exempel om "
+"arbetslösheten har ökat eller minskat med given andel."
 
 #: annotations/templates/annotation_index.html:19
 msgid ""
@@ -141,8 +145,8 @@ msgid ""
 "There are two additional fields, which are optional, but that you are "
 "encouraged to fill in to make the annotation more valuable. These are:"
 msgstr ""
-"Det finns ytterligare två fält, som är valfria, men som du uppmanas att fylla "
-"i för att göra annoteringen mer värdefull. Dessa är:"
+"Det finns ytterligare två fält, som är valfria, men som du uppmanas att "
+"fylla i för att göra annoteringen mer värdefull. Dessa är:"
 
 #: annotations/templates/annotation_index.html:25
 msgid ""
@@ -160,9 +164,9 @@ msgid ""
 "about the annotation of the claim. By adding this your annotation will be "
 "more valuable, but it is not mandatory."
 msgstr ""
-"Kommentar, är ett textfält där du kan lägga till en kommentar om hur du tänkt "
-"kring annoteringen av påståendet. Genom att lägga till detta blir din annotering "
-"mer värdefull, men fältet är inte obligatorisk."
+"Kommentar, är ett textfält där du kan lägga till en kommentar om hur du "
+"tänkt kring annoteringen av påståendet. Genom att lägga till detta blir din "
+"annotering mer värdefull, men fältet är inte obligatorisk."
 
 #: annotations/templates/annotation_index.html:29
 msgid ""
