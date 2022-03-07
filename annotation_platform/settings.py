@@ -32,6 +32,9 @@ ALLOWED_HOSTS = [
     "https://annotation-platform.herokuapp.com/"
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://annotation-platform.herokuapp.com/"
+]
 
 # Application definition
 
