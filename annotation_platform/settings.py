@@ -29,11 +29,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://annotation-platform.herokuapp.com/"
+    "https://annotation-platform.herokuapp.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://annotation-platform.herokuapp.com/"
+    "https://annotation-platform.herokuapp.com"
 ]
 
 # Application definition
