@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-07 18:46+0000\n"
+"POT-Creation-Date: 2022-03-08 08:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: annotation_platform/settings.py:147
+#: annotation_platform/settings.py:149
 msgid "Swedish"
 msgstr "Svenska"
 
-#: annotation_platform/settings.py:148
+#: annotation_platform/settings.py:150
 msgid "English"
 msgstr "Engelska"
 
@@ -31,10 +31,13 @@ msgid "Logout"
 msgstr "Logga ut"
 
 #: annotation_platform/templates/base.html:26
+#: users/templates/registration/password_change_form.html:6
 msgid "Change password"
 msgstr "Byt lösenord"
 
 #: annotation_platform/templates/base.html:30
+#: users/templates/registration/login.html:8
+#: users/templates/registration/login.html:12
 msgid "Login"
 msgstr "Logga in"
 
@@ -178,7 +181,7 @@ msgid ""
 "return button will bring you back to this page."
 msgstr ""
 "När du är klar klickar du på knappen \"Skicka in\" för att gå till nästa "
-"anspråk. \"Retur\" knappen tar dig tillbaka till denna sida."
+"anspråk. \"Tillbaka\" knappen tar dig tillbaka till denna sida."
 
 #: annotations/templates/annotation_index.html:31
 msgid "Let's get started!"
@@ -226,4 +229,67 @@ msgstr "Skicka in"
 
 #: annotations/templates/claim_annotation.html:47
 msgid "Return"
-msgstr "Retur"
+msgstr "Tillbaka"
+
+#: users/templates/registration/login.html:15
+#: users/templates/registration/password_change_done.html:8
+#: users/templates/registration/password_change_form.html:14
+#: users/templates/registration/password_reset_form.html:12
+msgid "Back to home"
+msgstr "Tillbaka till hem"
+
+#: users/templates/registration/login.html:16
+msgid "Login with GitHub"
+msgstr "Logga in med GitHub"
+
+#: users/templates/registration/login.html:17
+msgid "Reset password"
+msgstr "Byt lösenord"
+
+#: users/templates/registration/login.html:18
+#: users/templates/users/register.html:7 users/templates/users/register.html:12
+msgid "Register"
+msgstr "Registrera"
+
+#: users/templates/registration/password_change_done.html:6
+msgid "Password changed"
+msgstr "Lösenord ändrat"
+
+#: users/templates/registration/password_change_form.html:11
+msgid "Change"
+msgstr "Byt"
+
+#: users/templates/registration/password_reset_complete.html:6
+#: users/templates/registration/password_reset_done.html:6
+msgid "Password reset complete"
+msgstr "Lösenord återställt"
+
+#: users/templates/registration/password_reset_complete.html:8
+#: users/templates/registration/password_reset_done.html:8
+#: users/templates/users/register.html:15
+msgid "Back to login"
+msgstr "Tillbaka till inloggning"
+
+#: users/templates/registration/password_reset_confirm.html:6
+msgid "Confirm password reset"
+msgstr "Bekräfta återställning av lösenord"
+
+#: users/templates/registration/password_reset_confirm.html:11
+msgid "Confirm"
+msgstr "Bekräfta"
+
+#: users/templates/registration/password_reset_email.html:2
+msgid "Someone asked for password reset for email"
+msgstr "Någon begärde återställning av lösenord för epost"
+
+#: users/templates/registration/password_reset_email.html:3
+msgid "Follow the link below:"
+msgstr "Följ länken nedan:"
+
+#: users/templates/registration/password_reset_form.html:4
+msgid "Send password reset link"
+msgstr "Skicka länk för återställning av lösenord"
+
+#: users/templates/registration/password_reset_form.html:9
+msgid "Reset"
+msgstr "Återställ"

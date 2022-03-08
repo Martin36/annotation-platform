@@ -1,19 +1,20 @@
-{% extends 'users_base.html' %}
+{% extends 'base.html' %}
 
+{% load i18n %}
 {% load crispy_forms_tags %}  
 
-{% block content %}
+{% block page_content %}
 
-<h4>Login</h4>
+<h4>{% translate "Login" %}</h4>
 <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <input type="submit" value="Login">
+    <input type="submit" value="{% translate "Login" %}">
 </form>
 
-<a href="{% url 'dashboard' %}">Back to dashboard</a>
-<a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
-<a href="{% url 'password_reset' %}">Reset password</a>
-<a href="{% url 'register' %}">Register</a>
+<a href="{% url 'annotation_index' %}">{% translate "Back to home" %}</a>
+<a href="{% url 'social:begin' 'github' %}">{% translate "Login with GitHub" %}</a>
+<a href="{% url 'password_reset' %}">{% translate "Reset password" %}</a>
+<a href="{% url 'register' %}">{% translate "Register" %}</a>
 
 {% endblock %}
