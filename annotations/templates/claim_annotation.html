@@ -34,6 +34,23 @@
       </div>
 
       <h5>{% translate "Category" %}</h5>
+      <p>
+        <a data-toggle="collapse" href="#categories-info" aria-expanded="false" aria-controls="categories-info">
+          {% translate "More info" %}
+        </a>
+      </p>
+      <div class="collapse" id="categories-info" style="margin-bottom: 30px">
+        <div class="card card-body">
+          <p>{% translate "If you think that the current claim fits nicely into any of the following categories, please make sure to fill that in. This will help to increase the usefulness of the dataset. The categories are as follows:" %}</p>
+          <ul>
+            <li><b>{% translate "Opinion" %}</b>{% translate ', the statement is a specific preference or belief that the speaker has such as "I love pizza" and nothing that is relevant to fact-check.' %}</li>
+            <li><b>{% translate "Prediction" %}</b>{% translate ', the statement is a prediction about the future such as "Tax reductions will reduce the unemployment rate". Statements like these might be possible to fact-check in some cases, but will most likely not be possible to label with a binary label such as true or false.' %}</li>
+            <li><b>{% translate "Too general" %}</b>{% translate ', the statement is unspecific and can be interpreted in several different ways such as "We are facing another effort due to the pandemic". For a fact-checker to check these statements would mean that they had to make a few assumptions.' %}</li>
+            <li><b>{% translate "Uninteresting" %}</b>{% translate ', the statement is factual but not interesting to the general public such as "I had bread for breakfast".' %}</li>
+            <li><b>{% translate "Needs context" %}</b>{% translate ", it is not possible to fact-check the statement without additional context. This could be due to the paragraph being dependent on a previous paragraph. This category should NOT be used if the context that is needed is present in the provided paragraph, only in the cases where this paragraph does not provide sufficient context." %}</li>
+          </ul>
+        </div>
+      </div>
       <div class="form-group">
         {{ form.category }}
       </div>

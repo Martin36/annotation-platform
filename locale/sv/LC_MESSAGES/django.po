@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-08 08:16+0000\n"
+"POT-Creation-Date: 2022-03-11 15:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: annotation_platform/settings.py:149
+#: annotation_platform/settings.py:155
 msgid "Swedish"
 msgstr "Svenska"
 
-#: annotation_platform/settings.py:150
+#: annotation_platform/settings.py:156
 msgid "English"
 msgstr "Engelska"
 
@@ -31,7 +31,7 @@ msgid "Logout"
 msgstr "Logga ut"
 
 #: annotation_platform/templates/base.html:26
-#: users/templates/registration/password_change_form.html:6
+#: users/templates/registration/password_change_form.html:8
 msgid "Change password"
 msgstr "Byt lösenord"
 
@@ -45,27 +45,23 @@ msgstr "Logga in"
 msgid "None"
 msgstr "Ingen"
 
-#: annotations/enums.py:7
+#: annotations/enums.py:7 annotations/templates/claim_annotation.html:46
 msgid "Opinion"
 msgstr "Åsikt"
 
-#: annotations/enums.py:8
+#: annotations/enums.py:8 annotations/templates/claim_annotation.html:47
 msgid "Prediction"
 msgstr "Förutsägelse"
 
-#: annotations/enums.py:9
+#: annotations/enums.py:9 annotations/templates/claim_annotation.html:48
 msgid "Too general"
 msgstr "För generell"
 
-#: annotations/enums.py:10
-msgid "Impossible"
-msgstr "Omöjlig"
-
-#: annotations/enums.py:11
+#: annotations/enums.py:10 annotations/templates/claim_annotation.html:49
 msgid "Uninteresting"
 msgstr "Ointressant"
 
-#: annotations/enums.py:12
+#: annotations/enums.py:11 annotations/templates/claim_annotation.html:50
 msgid "Needs context"
 msgstr "Behöver sammanhang"
 
@@ -215,26 +211,93 @@ msgstr "Etikett"
 msgid "Category"
 msgstr "Kategori"
 
-#: annotations/templates/claim_annotation.html:41
+#: annotations/templates/claim_annotation.html:39
+msgid "More info"
+msgstr "Mer info"
+
+#: annotations/templates/claim_annotation.html:44
+msgid ""
+"If you think that the current claim fits nicely into any of the following "
+"categories, please make sure to fill that in. This will help to increase the "
+"usefulness of the dataset. The categories are as follows:"
+msgstr ""
+"Om du tycker att det aktuella påståendet passar in i någon av följande "
+"kategorier, se till att fylla i det. Detta kommer att bidra till att datan "
+"blir mer användbar. Kategorierna är följande:"
+
+#: annotations/templates/claim_annotation.html:46
+msgid ""
+", the statement is a specific preference or belief that the speaker has such "
+"as \"I love pizza\" and nothing that is relevant to fact-check."
+msgstr ""
+", uttalandet är en specifik preferens eller övertygelse som talaren har som "
+"t.ex. \"Jag älskar pizza\" och inget som är relevant att faktakontrollera."
+
+#: annotations/templates/claim_annotation.html:47
+msgid ""
+", the statement is a prediction about the future such as \"Tax reductions "
+"will reduce the unemployment rate\". Statements like these might be possible "
+"to fact-check in some cases, but will most likely not be possible to label "
+"with a binary label such as true or false."
+msgstr ""
+", uttalandet är en förutsägelse om framtiden som t.ex. \"Skattesänkningar kommer "
+"att minska arbetslösheten\". Påståenden som dessa kan vara möjliga att "
+"faktakontrollera i vissa fall, men kommer sannolikt inte att vara möjliga "
+"att märka med en binär etikett som t.ex. sant eller falskt."
+
+#: annotations/templates/claim_annotation.html:48
+msgid ""
+", the statement is unspecific and can be interpreted in several different "
+"ways such as \"We are facing another effort due to the pandemic\". For a "
+"fact-checker to check these statements would mean that they had to make a "
+"few assumptions."
+msgstr ""
+", uttalandet är ospecifikt och kan tolkas på flera olika sätt som \"Vi står "
+"inför ännu en kraftansträngning med anledning av pandemin\". Om en faktagranskare "
+"ska kontrollera dessa påståenden behöver de göra antaganden som inte framgår i "
+"påståendet."
+
+#: annotations/templates/claim_annotation.html:49
+msgid ""
+", the statement is factual but not interesting to the general public such as "
+"\"I had bread for breakfast\"."
+msgstr ""
+", uttalandet är ett faktapåstående men inte intressant för allmänheten som \"Jag "
+"åt bröd till frukost\"."
+
+#: annotations/templates/claim_annotation.html:50
+msgid ""
+", it is not possible to fact-check the statement without additional context. "
+"This could be due to the paragraph being dependent on a previous paragraph. "
+"This category should NOT be used if the context that is needed is present in "
+"the provided paragraph, only in the cases where this paragraph does not "
+"provide sufficient context."
+msgstr ""
+", det går inte att faktakontrollera påståendet utan ytterligare sammanhang. "
+"Detta kan bero på att stycket är beroende av ett tidigare stycke. Denna kategori "
+"ska INTE användas om det sammanhang som behövs finns i det angivna stycket, "
+"endast i de fall då detta stycke inte ger tillräckligt med information."
+
+#: annotations/templates/claim_annotation.html:58
 msgid "Comment"
 msgstr "Kommentar"
 
-#: annotations/templates/claim_annotation.html:45
+#: annotations/templates/claim_annotation.html:62
 msgid "Required"
 msgstr "Obligatorisk"
 
-#: annotations/templates/claim_annotation.html:46
+#: annotations/templates/claim_annotation.html:63
 msgid "Submit"
 msgstr "Skicka in"
 
-#: annotations/templates/claim_annotation.html:47
+#: annotations/templates/claim_annotation.html:64
 msgid "Return"
 msgstr "Tillbaka"
 
 #: users/templates/registration/login.html:15
 #: users/templates/registration/password_change_done.html:8
-#: users/templates/registration/password_change_form.html:14
-#: users/templates/registration/password_reset_form.html:12
+#: users/templates/registration/password_change_form.html:16
+#: users/templates/registration/password_reset_form.html:15
 msgid "Back to home"
 msgstr "Tillbaka till hem"
 
@@ -255,7 +318,7 @@ msgstr "Registrera"
 msgid "Password changed"
 msgstr "Lösenord ändrat"
 
-#: users/templates/registration/password_change_form.html:11
+#: users/templates/registration/password_change_form.html:13
 msgid "Change"
 msgstr "Byt"
 
@@ -270,11 +333,11 @@ msgstr "Lösenord återställt"
 msgid "Back to login"
 msgstr "Tillbaka till inloggning"
 
-#: users/templates/registration/password_reset_confirm.html:6
+#: users/templates/registration/password_reset_confirm.html:7
 msgid "Confirm password reset"
 msgstr "Bekräfta återställning av lösenord"
 
-#: users/templates/registration/password_reset_confirm.html:11
+#: users/templates/registration/password_reset_confirm.html:12
 msgid "Confirm"
 msgstr "Bekräfta"
 
@@ -286,10 +349,10 @@ msgstr "Någon begärde återställning av lösenord för epost"
 msgid "Follow the link below:"
 msgstr "Följ länken nedan:"
 
-#: users/templates/registration/password_reset_form.html:4
+#: users/templates/registration/password_reset_form.html:7
 msgid "Send password reset link"
 msgstr "Skicka länk för återställning av lösenord"
 
-#: users/templates/registration/password_reset_form.html:9
+#: users/templates/registration/password_reset_form.html:12
 msgid "Reset"
 msgstr "Återställ"

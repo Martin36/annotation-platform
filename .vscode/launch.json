@@ -30,7 +30,6 @@
       "program": "${workspaceFolder}/manage.py",
       "args": [
         "import_claims",
-        "data/partiledardebatt-22-01-12-filtered.csv"
       ],
       "django": true
     },

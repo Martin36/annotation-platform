@@ -29,12 +29,18 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://annotation-platform.herokuapp.com"
+    "https://annotation-platform.herokuapp.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://annotation-platform.herokuapp.com"
 ]
+
+# These variables should NOT be set in development
+if env("DJANGO_ENV") != "development":
+    CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -154,6 +160,10 @@ LANGUAGES = [
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Dropbox storage
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = env("DROPBOX_ACCESS_TOKEN")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

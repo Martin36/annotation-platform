@@ -1,19 +1,20 @@
-import csv
+import csv, requests
+import codecs
+from contextlib import closing
+
 from annotations.models import Claim
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
   help = "Imports claims data from csv file"
   
-  def add_arguments(self, parser):
-    parser.add_argument("data_file", type=str)
+  # def add_arguments(self, parser):
+  #   parser.add_argument("data_file", type=str, default="")
 
   def handle(self, *args, **options):
-    # data_file = "data/partiledardebatt-22-01-12-filtered.csv"
-    data_file = options["data_file"]
-    
-    with open(data_file) as f:
-      reader = csv.reader(f)
+    dropbox_link = "https://www.dropbox.com/s/sgk8ho8dson3e5t/partiledardebatt-22-01-12-filtered.csv?dl=1"
+    with closing(requests.get(dropbox_link, stream=True)) as r:      
+      reader = csv.reader(codecs.iterdecode(r.iter_lines(), "utf-8"))
       claims = []
       for idx, row in enumerate(reader):
         if idx == 0: continue
@@ -32,7 +33,7 @@ class Command(BaseCommand):
 
     self.stdout.write(
       self.style.SUCCESS(
-        'Successfully stored claims from "%s"' % data_file))
+        'Successfully stored claims from "%s"' % dropbox_link))
 
       
     
