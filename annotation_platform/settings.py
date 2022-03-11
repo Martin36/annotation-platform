@@ -161,10 +161,6 @@ LANGUAGES = [
 
 STATIC_URL = 'static/'
 
-# Dropbox storage
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = env("DROPBOX_ACCESS_TOKEN")
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
