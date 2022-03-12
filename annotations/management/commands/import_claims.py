@@ -17,7 +17,7 @@ class Command(BaseCommand):
       for idx, row in enumerate(reader):
         if idx == 0: continue
         claim = Claim(
-          idx = int(row[0]),
+          idx = int(row[1]),
           speaker = row[2],
           sent_sv = row[3],
           sent_en = row[4],
