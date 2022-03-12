@@ -18,3 +18,8 @@ def register(request):
       user.save()
       login(request, user)
       return redirect(reverse("annotation_index"))
+    else:
+      return render(
+        request, "users/register.html",
+        {"form": form}
+      )
