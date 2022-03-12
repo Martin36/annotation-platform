@@ -12,6 +12,7 @@ class Claim(models.Model):
   paragraph_text_sv = models.TextField(blank=True)
   paragraph_text_en = models.TextField(blank=True)
   paragraph_idx = models.IntegerField()
+  date = models.DateField()
   
 class Annotation(models.Model):
   annotator_id = models.CharField(max_length=50)

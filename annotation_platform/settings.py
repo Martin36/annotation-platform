@@ -25,9 +25,6 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = [
     "https://annotation-platform.herokuapp.com",
 ]
@@ -36,11 +33,14 @@ CSRF_TRUSTED_ORIGINS = [
     "https://annotation-platform.herokuapp.com"
 ]
 
-# These variables should NOT be set in development
-if env("DJANGO_ENV") != "development":
+if env("DJANGO_ENV") == "development":
+    DEBUG = True
+
+if env("DJANGO_ENV") == "production":
     CSRF_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
+
 
 # Application definition
 
