@@ -28,6 +28,21 @@
       {% csrf_token %}
 
       <h5>{% translate "Label" %}*</h5>
+      <p>
+        <a data-toggle="collapse" href="#labels-info" aria-expanded="false" aria-controls="labels-info">
+          {% translate "More info" %}
+        </a>
+      </p>
+      <div class="collapse" id="labels-info" style="margin-bottom: 30px">
+        <div class="card card-body">
+          <p>{% translate "Here are the explanations for the different categories:" %}</p>
+          <ul>
+            <li><b>{% translate "NOT Checkworthy" %}</b>{% translate ", which means that the stated claim is either not possible to check, such as predictions about the future, or it may be possible to check but not of interest to the general public, such as the breakfast the speaker had in the morning." %}</li>
+            <li><b>{% translate "Checkworthy" %}</b>{% translate ", which means that the statement is possible to check by a human fact-checker and is interesting to the general public, such as if the unemployment rate has increased or decreased by the proposed amount." %}</li>
+            <li><b>{% translate "Not applicable" %}</b>{% translate ", this label should ONLY be used in the case where you are unsure about which label to give the claim." %}</li>
+          </ul>
+        </div>
+      </div>
       <div class="form-group">
         {% for radio in form.label %}
           <div>{{ radio }}</div>
