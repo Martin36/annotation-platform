@@ -1,5 +1,16 @@
 # Annotation Platform
 
+## Prerequistics
+TODO
+
+## Start the server
+To start the server, run the following command:
+```
+python manage.py runserver
+```
+
+The server should be reachable at `http://127.0.0.1:8000/`. 
+
 ## Importing claims
 
 Download the claim dataset:

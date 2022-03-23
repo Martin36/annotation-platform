@@ -1,4 +1,4 @@
-import csv, math
+import math
 import pandas as pd
 
 from annotations.models import Annotation, Claim
@@ -28,7 +28,7 @@ class Command(BaseCommand):
       assert claim.sent_sv == row["sent_sv"]
       
       annotation = Annotation(
-        annotator_id = "123",
+        annotator_id = "123", # TODO: Change this
         label = row["label_m"],
         claim = claim,
         user = user
