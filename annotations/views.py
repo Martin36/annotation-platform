@@ -8,12 +8,19 @@ from annotations.models import Annotation, Claim
 def annotation_index(request):
   return render(request, 'annotation_index.html', {})
 
-def claim_list(request):
-  claims = Claim.objects.all()
+def annotation_list(request):
+  annotations = Annotation.objects.filter(
+    user__username=request.user
+  ).order_by("-claim__id")
+  
+  language = request.LANGUAGE_CODE
+
   context = {
-    'claims': claims
+    'annotations': annotations,
+    'language': language
   }
-  return render(request, 'claim_list.html', context)
+  
+  return render(request, 'annotation_list.html', context)
 
 @login_required
 def annotate_next_claim(request):

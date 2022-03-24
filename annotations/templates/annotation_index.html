@@ -31,10 +31,9 @@
 <p>{% translate "Let's get started!" %}</p>
 
 <div class="row">
-  {% comment %} <a href="{% url 'claim_list' %}" class="btn btn-primary mr-2">
-    {% translate "Claim list" %}
-  </a> {% endcomment %}
-
+  <a href="{% url 'annotation_list' %}" class="btn btn-primary mr-2">
+    {% translate "Annotation list" %}
+  </a>
   <a href="{% url 'annotate_next_claim' %}" class="btn btn-primary">
     {% translate "Annotate claims" %}
   </a>
