@@ -16,25 +16,25 @@ class Command(BaseCommand):
     df = pd.read_csv(data_file)
     df = df.where(pd.notnull(df), None) # Convert nans to Nones
     annotations = []
-    user = User.objects.get(username="martin")
+    user = User.objects.get(username="Jonas.funkquist@gmail.com")
     
     for _, row in df.iterrows():
       claim = Claim.objects.filter(idx=row["Index"]).first()
       if not claim:
         continue
-      if math.isnan(row["label_m"]):
+      if math.isnan(row["label_j"]):
         continue
       
       assert claim.sent_sv == row["sent_sv"]
       
       annotation = Annotation(
         annotator_id = "123", # TODO: Change this
-        label = row["label_m"],
+        label = row["label_j"],
         claim = claim,
         user = user
       )      
-      if row["comment_m"]:
-        annotation.comment = row["comment_m"]
+      if row["comment_j"]:
+        annotation.comment = row["comment_j"]
       annotations.append(annotation)
       
     Annotation.objects.bulk_create(annotations)
