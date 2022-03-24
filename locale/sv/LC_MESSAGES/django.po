@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 "INTE Kontrollvärd, vilket innebär att det angivna påståendet antingen inte "
 "går att kontrollera, såsom förutsägelser om framtiden, eller så kan det vara "
-"möjligt att kontrollera men inte ointressant för allmänheten, såsom ett "
+"möjligt att kontrollera men ointressant för allmänheten, såsom ett "
 "påstående om talarens frukost."
 
 #: annotations/templates/annotation_index.html:18
@@ -131,7 +131,7 @@ msgid ""
 "fact-checker and is interesting to the general public, such as if the "
 "unemployment rate has increased or decreased by the proposed amount."
 msgstr ""
-"Kontrollvärd, vilket innebär att påståendet är möjligt att kontrollera av en "
+"Kontrollvärd, vilket innebär att påståendet är möjligt att kontrolleras av en "
 "faktagranskare och är intressant för allmänheten, till exempel om "
 "arbetslösheten har ökat eller minskat med given andel."
 
